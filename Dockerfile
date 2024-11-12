@@ -5,7 +5,7 @@ FROM ruby:3.1-slim
 WORKDIR /app
 
 # Copy the project files to the container
-COPY Gemfile Gemfile.lock ./
+COPY Gemfile Gemfile.lock ./  
 COPY app.rb .
 
 # Install Ruby dependencies
