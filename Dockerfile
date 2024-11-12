@@ -1,18 +1,18 @@
-# Usa una imagen base de Ruby
+# Use a base Ruby image
 FROM ruby:3.1-slim
 
-# Establece el directorio de trabajo en el contenedor
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copia los archivos del proyecto al contenedor
+# Copy the project files to the container
 COPY Gemfile Gemfile.lock ./
 COPY app.rb .
 
-# Instala las dependencias de Ruby
+# Install Ruby dependencies
 RUN bundle install
 
-# Expone el puerto que usará Sinatra
+# Expose the port that Sinatra will use
 EXPOSE 4567
 
-# Comando para ejecutar la aplicación
+# Command to run the application
 CMD ["ruby", "app.rb"]
