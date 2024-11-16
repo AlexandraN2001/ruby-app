@@ -1,5 +1,4 @@
 require 'sinatra'
-
 get '/' do
-  "Hola, mundo Nayeli!"
+  "Hello World- code in Rubi!"
 end
